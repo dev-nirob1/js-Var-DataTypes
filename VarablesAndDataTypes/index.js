@@ -84,3 +84,11 @@ let todaysDate;
 console.log(todaysDate)
 var today;
 console.log(today)
+
+
+// ---------Data Types----------
+// data types: number, string,, boolean, object, array, function, undefined, null, Symbol, 
+const num = 25;
+console.log(typeof num)
+const str = 'hello'
+console.log(typeof str)
