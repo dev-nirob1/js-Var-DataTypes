@@ -1,4 +1,3 @@
-
 # **Synchronous (Blocking code)** #
 Means the code runs in a particular sequence of instructinos given in the program. Each instruction waits for the previous instruction to complete it's execution.
 
@@ -16,5 +15,49 @@ Due to synchronous programming, sometimes important instructions get blocked due
 
 
 # **Promises and CallBacks** #
+
+**CallBacks** A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action. A Callback is a function passed as an argument to another function.
+
+```
+const hello = () => {
+    console.log('hello world')
+}
+setTimeout(hello, 3000) //directly passed hello function as an argument to setTimeout and the function will execute after 3s.
+
+//alternative
+
+setTimeout(()=>{
+    //pass a anonymous function 
+    console.log('hello world)
+}, 2000);
+```
+
+**Callback Hell**
+- Nested callbacks stacked below one another forming a pyramid structure (also known as Pyramid of Doom) . This style of programming becomes difficult to understand and manage.
+
+*Problems of nested callbacks*
+    - Too many nested callbacks.
+    - Hard to debug and scale.
+    - Becomes unmanageable with more async operations.
+
+```
+//getting multiple data
+const getData = (id, nextData) => {
+    setTimeout(() => {
+        console.log('getting data', id);
+        if (nextData) {
+            nextData(); // Calls the next function in the sequence
+        }
+    }, 2000)
+}
+
+//nested callbacks
+getData(1, () => {
+    getData(2, () => {
+        getData(3)
+    })
+})
+```
+
 
 **Promises =>** A Promise is an object representing the eventual completion or failure of an asynchronous operation. 
