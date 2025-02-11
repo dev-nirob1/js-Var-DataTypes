@@ -61,3 +61,29 @@ getData(1, () => {
 
 
 **Promises =>** A Promise is an object representing the eventual completion or failure of an asynchronous operation. 
+
+- A Promise can be in one of three states:
+
+1. Pending – The initial state, before the operation completes.
+2. Fulfilled – The operation was successful, and .then() is called.
+3. Rejected – The operation failed, and .catch() is called.
+
+```
+const fetchData = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        let success = true; // "✅ Data fetched successfully!"
+       // let success = false;  "Error: Failed to fetch data."
+        if (success) {
+            resolve("Data fetched successfully!");
+        } else {
+            reject("Error: Failed to fetch data.");
+        }
+    }, 2000);
+});
+
+// Handling promise
+fetchData
+    .then(result => console.log(result))  // If resolved
+    .catch(error => console.error(error)); // If rejected
+
+```
