@@ -22,3 +22,48 @@ fetch('https://api.example.com/data')
   .then(data => console.log(data))    // Handle the data
   .catch(error => console.error('Error:', error)); // Handle errors
 ```
+
+# **UnderStanding Terms** #
+
+- *AJAX (Asynchronous JavaScript and XML):*  A technique for making asynchronous requests to the server without reloading the page. Although originally designed for XML, it is now commonly used with JSON.
+- *JSON (JavaScript Object Notation):* A lightweight data format for exchanging information between a server and a client. It is easy to read and write, and it is widely used in APIs.
+- *json() method:* returns a second promise that resoles with the result of parsing the response body text as JSON. 
+  - *Input:* JSON-formatted response from the server.
+  - *Output:* A Javascript Object.
+
+# **Request & Response** #
+
+**HTTP Verbs**
+- HTTP defines several request methods to interact with resources on a server:
+
+| Method | Description |
+|--------|-------------|
+| GET | Retrieves data from a server (e.g., fetching a webpage or API data).|
+| POST | Sends data to a server to create a new resource|
+| PUT | Updates an existing resource or creates one if it doesn't exist.|
+| PATCH | Partially updates an existing resource |
+| DELETE | Removes a specified resource from the server |
+
+
+**Response Status Codes**
+HTTP response status codes indicate whether a request was successful or encountered  an issue.
+
+**Common Status Codes**
+- ==200 OK== Request was successful.
+- ==201 Created== A new resource was created successfully
+- ==204 No Content== Request was successfull but returned no data.
+- ==400 Bad Request== Client send an invalid request.
+- ==401 Unauthorized== Authentication is Required.
+- ==403 Forbidden== Client does not have permission.
+- ==404 Not Found== The requested resource does not exist.
+- ==500 Internal Server Errror== A general server-side error occurred
+
+
+# **HTTP Response Headers** #
+*HTTP* Response headers also contain details about the responses, such as content type, HTTP status code etc. 
+| Header | Description |
+|--------|-------------|
+| Content-Type | Specifies the media type (e.g., ==application/json==).|
+| Cache-Control | Defines caching policies. |
+| Access-Control-Allow-Origin | Specifies which domains can access the resource (CORS).|
+| Authorization | Contains credentials for authentication. |
