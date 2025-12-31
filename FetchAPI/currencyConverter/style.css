@@ -66,7 +66,7 @@ form input {
 
 .result{
     font-size: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 form button{
@@ -74,4 +74,5 @@ form button{
     font-size: 1.2rem;
     background-color: #af4d98;
     color: #fff;
+    cursor: pointer;
 }
