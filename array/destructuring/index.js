@@ -5,7 +5,7 @@ const salad = ["tomato", "corn", "cucumber", "carrot"];
 // const carrot = salad[3]
 
 // default value
-const [tomato, corn, cucumber, carrot, chili = "bombai"] = salad;
+// const [tomato, corn, cucumber, carrot, chili = "bombai"] = salad;
 // console.log(tomato, corn, cucumber, carrot);
 // console.log(chili);
 
@@ -64,19 +64,40 @@ const [tomato, corn, cucumber, carrot, chili = "bombai"] = salad;
 // 💡 Hint (যদি দরকার হয়)
 // Left side-এ nested pattern লিখতে হবে
 // Unused parts skip করতে পারো
-const response = [
-  200,
-  ["OK", ["Dhaka", "Bangladesh"]],
-  [
-    ["product-1", 120],
-    ["product-2", 200],
-  ],
-  false,
-];
-const [
-  statusCode,
-  [statusText, [city, country]],
-  [[firstProductName, firstProductPrice]],
-  isCached,
-] = response;
-console.log(statusCode, statusText, city, country,firstProductName, firstProductPrice, isCached);
+// const response = [
+//   200,
+//   ["OK", ["Dhaka", "Bangladesh"]],
+//   [
+//     ["product-1", 120],
+//     ["product-2", 200],
+//   ],
+//   false,
+// ];
+// const [
+//   statusCode,
+//   [statusText, [city, country]],
+//   [[firstProductName, firstProductPrice]],
+//   isCached,
+// ] = response;
+// console.log(statusCode, statusText, city, country,firstProductName, firstProductPrice, isCached);
+
+// spread operator 
+
+// salad array expand hoye orignal array copy kore 
+const newSalad = [...salad]
+console.log(newSalad);
+// console.log(salad === newSalad);`
+
+// swape value 
+// let sopon = 'Sopon';
+// let dada = 'dada'
+// [dada, sopon] = [sopon, dada]
+// console.log(dada, sopon);
+// console.log(sopon, dada);
+
+// marge two or more arrays. 
+const love = ['ami', 'tumi', 'ar', 'babu']
+const work = ['khai', 'dai', 'ghuri', 'ghumai']
+
+const workLove = [...work, ...love]
+console.log(workLove);
