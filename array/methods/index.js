@@ -86,5 +86,26 @@ const nameZA = [...products].sort((a,b)=> {
 const methods = ['slice', 'sort', 'includes', 'indexOf'];
 const deleted = methods.splice(1, 0, 'splice') //will return empty array cause we didn't pass number param (how many element will delete);
 const deletedItem = methods.splice(1, methods.length, 'fill')
-console.log(deletedItem);
-console.log(deleted, methods);
+// console.log(deletedItem);
+// console.log(deleted, methods);
+
+// problem-1 
+let names = ['tom', 'jerry', 'oggy']; //delete the array
+// names.splice(0, names.length) 
+// names = []
+
+// console.log(names);
+
+// at() method 
+const numb = [1,2,3,4,5];
+const item = numb.at() //will return 1st elemment cause didn't pass anything
+
+const atElem = numb.at(3) //will return 4
+const negativeIndex = numb.at(-2); //nagative index
+// console.log(atElem);
+
+// flat() Method 
+const nestedArr = [1,2,3,[4,5],[6,7,[8,9,[10,11]]]]
+// console.log(nestedArr.flat()); 1level nesting
+// console.log(nestedArr.flat(2)); 2lelel nesting
+// console.log(nestedArr.flat(Infinity)); joto nesting e thakuk flat() hobe 
