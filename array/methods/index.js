@@ -109,3 +109,31 @@ const nestedArr = [1,2,3,[4,5],[6,7,[8,9,[10,11]]]]
 // console.log(nestedArr.flat()); 1level nesting
 // console.log(nestedArr.flat(2)); 2lelel nesting
 // console.log(nestedArr.flat(Infinity)); joto nesting e thakuk flat() hobe 
+
+const data = [1,2,3,4,5,6,7,8];
+const copy = data.copyWithin(0, 2, 4);
+// console.log(data);
+
+// toReversed method 
+const date = [1,2,3];
+const revDate = date.toReversed();
+// console.log(date, revDate);
+
+// toSorted Method 
+const alphab = ['c', 'b', 'a', 'd'];
+const sorNum = [1,2,3,4]
+const descNum = sorNum.toSorted((a,b)=> b-a)
+const sortAlpha = alphab.toSorted();
+// console.log(descNum);
+
+// toSpliced method 
+const months = ['jan', 'march', 'april'];
+const addedMoth = months.toSpliced(1, 0, 'February');
+// console.log(addedMoth);
+
+// with() method 
+const age = [19, 22, 25];
+const newAge = age.with(1, 20)
+console.log(newAge, age);
+
+
