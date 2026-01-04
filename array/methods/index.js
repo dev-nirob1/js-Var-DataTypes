@@ -81,3 +81,10 @@ const nameZA = [...products].sort((a,b)=> {
     return 0
 })
 // console.log(nameZA);
+
+// splice() method 
+const methods = ['slice', 'sort', 'includes', 'indexOf'];
+const deleted = methods.splice(1, 0, 'splice') //will return empty array cause we didn't pass number param (how many element will delete);
+const deletedItem = methods.splice(1, methods.length, 'fill')
+console.log(deletedItem);
+console.log(deleted, methods);
