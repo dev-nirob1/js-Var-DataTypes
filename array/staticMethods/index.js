@@ -1,12 +1,26 @@
 // Array static methods
-// Array.of() Methods 
-const arrOf = [2,3, true, {'item': 1}];
-const pussed = arrOf.push(2)
+// Array.of() Methods
+const arrOf = [2, 3, true, { item: 1 }];
+const pussed = arrOf.push(2);
 // console.log(arrOf);
 // console.log(pussed);
 // console.log(arrOf.at(3));
 
+// array like
+const li = document.getElementsByTagName("li");
+// console.log(li[3]);
+const listItem = Array.from(li); //array.from() array like ke actual array te convert kore.
+// console.log(listItem);
+// console.log(listItem.at(2)); now you can apply any array method
 
-// array like 
-const li = document.getElementsByTagName('li')
-console.log(li[3]);
+function sum() {
+  console.log(arguments);
+  const arr = Array.from(arguments);
+  console.log(arr);
+  //spread operator use koreo arguments object ke actuall array te convert kora jay
+  [...arguments].forEach((elem) => {
+    console.log(elem);
+  });
+}
+
+sum(1, 2, 3, 4);
