@@ -69,3 +69,11 @@ for (let i = 0; i <= nums.length - 1; i++) {
   }
 //   console.log("data", nums[i]);
 }
+// - [ ] **T-012**: Create an Array of 10 elements. Use the `splice()` method to empty the array.
+const intNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+ intNumber.splice(0)
+//  console.log(intNumber);
+
+// - [ ] **T-013**: Create an Array of 10 elements. You can empty the array in multiple ways: using the `length` property, using the `pop()` method, using the `shift()` method, setting the array with `[]`, or the `splice()` method. Which among these methods are most efficient and why?
+
+// - [ ] **T-014**: What happens when you concatenate two empty arrays?
