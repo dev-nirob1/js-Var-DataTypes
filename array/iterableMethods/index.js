@@ -1,14 +1,56 @@
     // iterable methods 
     
     // filter() method
+const developers = [
+  {
+    id: 1,
+    name: "Rahim",
+    age: 22,
+    role: "frontend",
+    salary: 35000,
+    isActive: true
+  },
+  {
+    id: 2,
+    name: "Karim",
+    age: 28,
+    role: "backend",
+    salary: 45000,
+    isActive: false
+  },
+  {
+    id: 3,
+    name: "Hasan",
+    age: 24,
+    role: "fullstack",
+    salary: 55000,
+    isActive: true
+  },
+  {
+    id: 4,
+    name: "Nabila",
+    age: 21,
+    role: "frontend",
+    salary: 30000,
+    isActive: true
+  }
+];
+
+const adult = developers.filter((elem) => {
+    // filter users array er sob gulo element check korbe. then condition e jegulo true asbe segulo adult array te add hobe.
+    return elem.age >=18;
+})
+console.log(adult);
+const notAdult = developers.filter(dev => {
+  return dev.age < 18;
+})
+console.log(notAdult);
+
+
+// map() method 
 
 const users = [
   { name: 'Rahim', age: 17 },
   { name: 'Karim', age: 22 },
   { name: 'Hasan', age: 19 }
 ];
-const adult = users.filter((elem) => {
-    // filter users array er sob gulo element check korbe. then condition e jegulo true asbe segulo adult array te add hobe.
-    return elem.age >=18;
-})
-console.log(adult);
