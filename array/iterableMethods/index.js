@@ -138,10 +138,14 @@ const frontDevTotalAge = developers.reduce((acc, currentElem)=>{
 // console.log(frontDevTotalAge);
 
 const arr = [1, 2, 3, 4, 5];
-const total = arr.reduce((acc, currenVal)=>{
-  console.log(acc);
+const totalWithoutInitial = arr.reduce((acc, currenVal, i)=>{
+  // console.log('acc', acc , 'curr', currenVal, 'index', i);
   return acc + currenVal
 })
-console.log(total);
+const totalWithInitial = arr.reduce((acc, currenVal, i)=>{
+  console.log('acc', acc , 'curr', currenVal, 'index', i);
+  return acc + currenVal
+}, 0)
+console.log(totalWithInitial);
 
 
