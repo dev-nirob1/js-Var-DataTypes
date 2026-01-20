@@ -85,11 +85,63 @@ const notAdult = developers.filter((dev) => {
 
 const frontendDeveloper = developers.map((data) => {
   return data.role == "frontend" && data.name; //returned map() array will have same length as original array;
-  //array transform korte map use kora hoy 
+  //array transform korte map use kora hoy
 });
 // console.log(frontendDeveloper);
-const devNameWithRole = developers.map(dev => {
-    dev['devNameRole'] = dev.name + dev.role;
-    return dev //added a new property to every element.
+const devNameWithRole = developers.map((dev) => {
+  dev["devNameRole"] = dev.name + dev.role;
+  return dev; //added a new property to every element.
+});
+// console.log(devNameWithRole);
+// const arr = [1, 2, 3, 4, 5];
+// let total = 0;
+
+// for (let i = 0; i < arr.length; i++) {
+//   console.log(arr[i]);
+//   total = total + arr[i];
+// }
+// console.log(total);
+
+
+// reduce() method 
+
+// arr.reduce(
+//   reducer(
+//     accumulator,
+//     currentValue,
+//     index,
+//     array
+//   ),
+//   initialValue
+// )
+// const sum = arr.reduce((acc, currentValue) =>{
+//   return acc + currentValue;
+// },0)
+// console.log(sum);
+
+const totalAge = developers.reduce((acc, currentValue) => {
+  const sum = acc + currentValue.age;
+  // console.log(sum);
+return sum
+},0)
+
+const average = totalAge / developers.length;
+// console.log(totalAge, average);
+
+const frontDevTotalAge = developers.reduce((acc, currentElem)=>{
+  if(currentElem.role === 'frontend') {
+   return acc + currentElem.age
+  }
+  return acc;
+
+}, 0);
+// console.log(frontDevTotalAge);
+
+const arr = [1, 2, 3, 4, 5];
+const total = arr.reduce((acc, currenVal)=>{
+  console.log(acc);
+  return acc + currenVal
 })
-console.log(devNameWithRole);
+console.log(total);
+
+
