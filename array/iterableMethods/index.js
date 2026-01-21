@@ -166,4 +166,10 @@ const underAge = developers.some((elem,i) =>{
 const frontEnddev = developers.find(elem => {
   return elem.role === 'frontend'
 });
-console.log(frontEnddev);
+// console.log(frontEnddev);
+
+// findIndex() method 
+const findIndex = developers.findIndex(elem => {
+  return elem.role === 'backend';
+});
+console.log(findIndex);
