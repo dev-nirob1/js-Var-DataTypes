@@ -160,4 +160,10 @@ const underAge = developers.some((elem,i) =>{
  return elem.age < 18
 })
 
-console.log(underAge);
+// console.log(underAge);
+
+// find() method 
+const frontEnddev = developers.find(elem => {
+  return elem.role === 'frontend'
+});
+console.log(frontEnddev);
