@@ -48,40 +48,7 @@ const notAdult = developers.filter((dev) => {
 
 // map() method
 
-// const developers = [
-//   {
-//     id: 1,
-//     name: "Rahim",
-//     age: 22,
-//     role: "frontend",
-//     salary: 35000,
-//     isActive: true
-//   },
-//   {
-//     id: 2,
-//     name: "Karim",
-//     age: 28,
-//     role: "backend",
-//     salary: 45000,
-//     isActive: false
-//   },
-//   {
-//     id: 3,
-//     name: "Hasan",
-//     age: 24,
-//     role: "fullstack",
-//     salary: 55000,
-//     isActive: true
-//   },
-//   {
-//     id: 4,
-//     name: "Nabila",
-//     age: 21,
-//     role: "frontend",
-//     salary: 30000,
-//     isActive: true
-//   }
-// ];
+
 
 const frontendDeveloper = developers.map((data) => {
   return data.role == "frontend" && data.name; //returned map() array will have same length as original array;
@@ -143,9 +110,54 @@ const totalWithoutInitial = arr.reduce((acc, currenVal, i)=>{
   return acc + currenVal
 })
 const totalWithInitial = arr.reduce((acc, currenVal, i)=>{
-  console.log('acc', acc , 'curr', currenVal, 'index', i);
+  // console.log('acc', acc , 'curr', currenVal, 'index', i);
   return acc + currenVal
 }, 0)
-console.log(totalWithInitial);
+// console.log(totalWithInitial);
+// const developers = [
+//   {
+//     id: 1,
+//     name: "Rahim",
+//     age: 22,
+//     role: "frontend",
+//     salary: 35000,
+//     isActive: true
+//   },
+//   {
+//     id: 2,
+//     name: "Karim",
+//     age: 28,
+//     role: "backend",
+//     salary: 45000,
+//     isActive: false
+//   },
+//   {
+//     id: 3,
+//     name: "Hasan",
+//     age: 24,
+//     role: "fullstack",
+//     salary: 55000,
+//     isActive: true
+//   },
+//   {
+//     id: 4,
+//     name: "Nabila",
+//     age: 21,
+//     role: "frontend",
+//     salary: 30000,
+//     isActive: true
+//   }
+// ];
 
+const totalSalary = developers.reduce((acc, developer)=>{
+  return acc + developer.salary
+},0);
+// console.log('total salary',totalSalary);
 
+// some() method 
+
+const underAge = developers.some((elem,i) =>{
+ return elem.age < 18
+})
+
+console.log(underAge);
