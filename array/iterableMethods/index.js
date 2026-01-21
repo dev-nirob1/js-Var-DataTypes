@@ -172,4 +172,9 @@ const frontEnddev = developers.find(elem => {
 const findIndex = developers.findIndex(elem => {
   return elem.role === 'backend';
 });
-console.log(findIndex);
+// console.log(findIndex);
+
+const findLastIndex = developers.findLastIndex(elem => {
+  return elem.role === 'backend';
+});
+console.log(findLastIndex);
