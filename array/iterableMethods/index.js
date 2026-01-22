@@ -16,7 +16,7 @@ const developers = [
     age: 28,
     role: "backend",
     salary: 45000,
-    isActive: false,
+    isActive: true,
   },
   {
     id: 3,
@@ -178,3 +178,10 @@ const findLastIndex = developers.findLastIndex(elem => {
   return elem.role === 'backend';
 });
 console.log(findLastIndex);
+
+// every method 
+
+const activeDev = developers.every((elem) => {
+  return elem.isActive;
+})
+// console.log(activeDev); 
