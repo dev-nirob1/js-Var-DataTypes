@@ -218,7 +218,20 @@ for(const value of values){
 // flatMap() method 
 
 const flattenArray = numbers.flatMap((num)=> {
-  console.log(num);
+  // console.log(num);
   return num * 2;
 })
-console.log(flattenArray);
+// console.log(flattenArray);
+
+// reduceRight() method 
+
+const numb = [100, 40, 15];
+const subsTract = numb.reduce((acc, currentElem) => {
+  return acc - currentElem;
+});
+// console.log(subsTract);
+
+const subFromRight = numb.reduceRight((acc, currentElem) => {
+  return acc - currentElem;
+});
+// console.log(subFromRight);
