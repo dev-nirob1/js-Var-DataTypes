@@ -177,7 +177,8 @@ const findIndex = developers.findIndex(elem => {
 const findLastIndex = developers.findLastIndex(elem => {
   return elem.role === 'backend';
 });
-console.log(findLastIndex);
+// console.log(findLastIndex);
+
 
 // every method 
 
@@ -185,3 +186,12 @@ const activeDev = developers.every((elem) => {
   return elem.isActive;
 })
 // console.log(activeDev); 
+
+
+// forEach method 
+const element = developers.forEach((elem) => {
+  //console.log(elem); element
+  // console.log(elem.position = 'Manager');adden new key-value in element
+})
+// console.log('element', element);
+// console.log(developers);
