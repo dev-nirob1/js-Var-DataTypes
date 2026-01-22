@@ -198,7 +198,7 @@ const element = developers.forEach((elem) => {
 
 
 // entries() and values() method 
-const numbers = [1,2,3,4,5,6];
+const numbers = [[1],[[2]],[3],[4],[5],[6]];
 
 // console.log(numbers.entries());
 const num = numbers.entries()
@@ -212,5 +212,13 @@ for(const [key, value] of numbers.entries()){
 
 const values = numbers.values();
 for(const value of values){
-  console.log(value);
-}
+  // console.log(value);
+};
+
+// flatMap() method 
+
+const flattenArray = numbers.flatMap((num)=> {
+  console.log(num);
+  return num * 2;
+})
+console.log(flattenArray);
