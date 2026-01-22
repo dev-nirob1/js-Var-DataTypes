@@ -195,3 +195,17 @@ const element = developers.forEach((elem) => {
 })
 // console.log('element', element);
 // console.log(developers);
+
+
+// entries() and values() method 
+const numbers = [1,2,3,4,5,6];
+
+// console.log(numbers.entries());
+const num = numbers.entries()
+for(const [key, value] of num){
+  console.log(key, value);
+}
+
+for(const [key, value] of numbers.entries()){
+  console.log(key, value);
+}
