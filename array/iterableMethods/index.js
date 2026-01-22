@@ -203,9 +203,14 @@ const numbers = [1,2,3,4,5,6];
 // console.log(numbers.entries());
 const num = numbers.entries()
 for(const [key, value] of num){
-  console.log(key, value);
+  // console.log(key, value);
 }
 
 for(const [key, value] of numbers.entries()){
-  console.log(key, value);
+  // console.log(key, value);
+}
+
+const values = numbers.values();
+for(const value of values){
+  console.log(value);
 }
