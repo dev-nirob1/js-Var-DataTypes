@@ -48,8 +48,6 @@ const notAdult = developers.filter((dev) => {
 
 // map() method
 
-
-
 const frontendDeveloper = developers.map((data) => {
   return data.role == "frontend" && data.name; //returned map() array will have same length as original array;
   //array transform korte map use kora hoy
@@ -69,8 +67,7 @@ const devNameWithRole = developers.map((dev) => {
 // }
 // console.log(total);
 
-
-// reduce() method 
+// reduce() method
 
 // arr.reduce(
 //   reducer(
@@ -89,30 +86,29 @@ const devNameWithRole = developers.map((dev) => {
 const totalAge = developers.reduce((acc, currentValue) => {
   const sum = acc + currentValue.age;
   // console.log(sum);
-return sum
-},0)
+  return sum;
+}, 0);
 
 const average = totalAge / developers.length;
 // console.log(totalAge, average);
 
-const frontDevTotalAge = developers.reduce((acc, currentElem)=>{
-  if(currentElem.role === 'frontend') {
-   return acc + currentElem.age
+const frontDevTotalAge = developers.reduce((acc, currentElem) => {
+  if (currentElem.role === "frontend") {
+    return acc + currentElem.age;
   }
   return acc;
-
 }, 0);
 // console.log(frontDevTotalAge);
 
 const arr = [1, 2, 3, 4, 5];
-const totalWithoutInitial = arr.reduce((acc, currenVal, i)=>{
+const totalWithoutInitial = arr.reduce((acc, currenVal, i) => {
   // console.log('acc', acc , 'curr', currenVal, 'index', i);
-  return acc + currenVal
-})
-const totalWithInitial = arr.reduce((acc, currenVal, i)=>{
+  return acc + currenVal;
+});
+const totalWithInitial = arr.reduce((acc, currenVal, i) => {
   // console.log('acc', acc , 'curr', currenVal, 'index', i);
-  return acc + currenVal
-}, 0)
+  return acc + currenVal;
+}, 0);
 // console.log(totalWithInitial);
 // const developers = [
 //   {
@@ -149,81 +145,78 @@ const totalWithInitial = arr.reduce((acc, currenVal, i)=>{
 //   }
 // ];
 
-const totalSalary = developers.reduce((acc, developer)=>{
-  return acc + developer.salary
-},0);
+const totalSalary = developers.reduce((acc, developer) => {
+  return acc + developer.salary;
+}, 0);
 // console.log('total salary',totalSalary);
 
-// some() method 
+// some() method
 
-const underAge = developers.some((elem,i) =>{
- return elem.age < 18
-})
+const underAge = developers.some((elem, i) => {
+  return elem.age < 18;
+});
 
 // console.log(underAge);
 
-// find() method 
-const frontEnddev = developers.find(elem => {
-  return elem.role === 'frontend'
+// find() method
+const frontEnddev = developers.find((elem) => {
+  return elem.role === "frontend";
 });
 // console.log(frontEnddev);
 
-// findIndex() method 
-const findIndex = developers.findIndex(elem => {
-  return elem.role === 'backend';
+// findIndex() method
+const findIndex = developers.findIndex((elem) => {
+  return elem.role === "backend";
 });
 // console.log(findIndex);
 
-const findLastIndex = developers.findLastIndex(elem => {
-  return elem.role === 'backend';
+const findLastIndex = developers.findLastIndex((elem) => {
+  return elem.role === "backend";
 });
 // console.log(findLastIndex);
 
-
-// every method 
+// every method
 
 const activeDev = developers.every((elem) => {
   return elem.isActive;
-})
-// console.log(activeDev); 
+});
+// console.log(activeDev);
 
-
-// forEach method 
+// forEach method
 const element = developers.forEach((elem) => {
   //console.log(elem); element
   // console.log(elem.position = 'Manager');adden new key-value in element
-})
+});
 // console.log('element', element);
 // console.log(developers);
 
-
-// entries() and values() method 
-const numbers = [[1],[[2]],[3],[4],[5],[6]];
+// entries() and values() method
+const numbers = [[1], [[2]], [3], [4], [5], [6]];
 
 // console.log(numbers.entries());
-const num = numbers.entries()
-for(const [key, value] of num){
+const num = numbers.entries();
+for (const [key, value] of num) {
   // console.log(key, value);
 }
 
-for(const [key, value] of numbers.entries()){
+for (const [key, value] of numbers.entries()) {
   // console.log(key, value);
 }
 
 const values = numbers.values();
-for(const value of values){
+for (const value of values) {
   // console.log(value);
-};
+}
 
-// flatMap() method 
+// flatMap() method
 
-const flattenArray = numbers.flatMap((num)=> {
+const flattenArray = numbers.flatMap((num) => {
   // console.log(num);
   return num * 2;
-})
+});
 // console.log(flattenArray);
 
-// reduceRight() method 
+// reduceRight() method
 
 const numb = [100, 40, 15];
 const subsTract = numb.reduce((acc, currentElem) => {
@@ -235,3 +228,24 @@ const subFromRight = numb.reduceRight((acc, currentElem) => {
   return acc - currentElem;
 });
 // console.log(subFromRight);
+
+// chaining related problem
+
+// const updatedSaleryOfFrontendDev = developers.filter((dev) => {
+//   return dev.role === 'frontend' && dev.age >= 18;
+// }).map(data=> data.salary = data.salary * 10 / 100).reduce((acc, currentValue) => {
+//   return acc + currentValue
+// }, 0)
+// console.log(updatedSaleryOfFrontendDev);
+
+const updatedSalary = developers
+  .filter((elem) => {
+    return elem.role == "frontend" && elem.age >= 18;
+  })
+  .map((dev) => {
+    return dev.salary * 1.1;
+  })
+  .reduce((acc, currentValue) => {
+    return acc + currentValue;
+  }, 0);
+console.log(updatedSalary);
