@@ -3,4 +3,4 @@ let user = {
     age: 24,
 
 }
-console.log(user);
+console.log(user );
